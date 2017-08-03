@@ -50,6 +50,16 @@ mBleManager = BleManager.getInstance(this);
       });
 ```
 
+# 设备的断开连接
+
+```
+
+if(mBleManager != null){
+    mBleManager.closeBluetoothGatt();
+}
+```
+
+
 # 设备通知服务的绑定
 
 ```
