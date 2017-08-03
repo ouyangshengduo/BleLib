@@ -1,0 +1,120 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <TextView 
+        android:id="@+id/tvConnectInfo"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:hint="连接状态信息"
+        />
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="50dp"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/btnScanDevice"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="50dp"
+			android:text="搜索设备"/>
+
+		<Button
+			android:id="@+id/btnDisconnect"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="50dp"
+			android:text="断开设备"/>
+
+	</LinearLayout>
+
+    
+    <ListView 
+        android:id="@+id/lvbluetooth"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+		android:visibility="gone"
+        >
+        
+    </ListView>
+    
+    <TextView 
+        android:id="@+id/tvShowDeviceData"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:gravity="center_vertical"
+        android:inputType="textMultiLine"
+        android:hint="下位机上发数据显示"
+		android:scrollbars="vertical"
+		android:fadeScrollbars="false"
+        />
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        >
+        <Button 
+	        android:id="@+id/btnOpenNotify"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="50dp"
+	        android:text="开启数据通知"/>
+        
+        <Button 
+	        android:id="@+id/btnCloseNotify"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="50dp"
+	        android:text="关闭数据通知"/>
+
+		<Button
+			android:id="@+id/btnClear"
+			android:layout_width="0dp"
+			android:layout_weight="1"
+			android:layout_height="50dp"
+			android:text="清空"/>
+    </LinearLayout>
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="100dp"
+		android:orientation="vertical"
+		>
+		<EditText
+			android:id="@+id/etSendData"
+			android:layout_width="match_parent"
+			android:layout_height="50dp"
+			android:hint="样例(16进制): 55 AA"/>
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="50dp"
+			android:orientation="horizontal"
+			>
+			<Button
+				android:id="@+id/btnSendData"
+				android:layout_width="0dp"
+				android:layout_weight="5"
+				android:layout_height="50dp"
+				android:text="指令下发"/>
+
+			<TextView
+				android:id="@+id/tvSendResponse"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_gravity="center"
+				android:gravity="center"
+				android:layout_height="50dp"
+				android:hint="下发结果"
+				 />
+		</LinearLayout>
+	</LinearLayout>
+    
+
+</LinearLayout>
